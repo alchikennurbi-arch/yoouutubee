@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid {
+        gap: 40px;
+        display: grid;
+        grid-template-columns: repeat(1, 3fr);
+        grid-template-rows: repeat(1, 3fr);
+      }
+      .box1 {
+        display: grid;
+        transition: 0.5s;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        padding: 5px;
+      }
+      .box1:hover {
+        transform: scale(1.08);
+        background-color: gray;
+      }
+      .box2 {
+        padding: 5px;
+        transition: 0.5s;
+        display: grid;
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+      .box2:hover {
+        background-color: gray;
+        transform: scale(1.08);
+      }
+      .box3 {
+        display: grid;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        padding: 5px;
+        transition: 0.5s;
+      }
+      .box3:hover {
+        transform: scale(1.08);
+        background-color: gray;
+      }
+      .box4 {
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding: 5px;
+        transition: 0.5s;
+      }
+      .box4:hover {
+        transform: scale(1.08);
+        background-color: gray;
+      }
+      .box5 {
+        display: grid;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        padding: 5px;
+        transition: 0.5s;
+      }
+      .box5:hover {
+        transform: scale(1.08);
+        background-color: gray;
+      }
+      .box6 {
+        display: grid;
+        grid-column: 3/4;
+        grid-row: 2/3;
+        padding: 5px;
+        transition: 0.5s;
+      }
+      .box6:hover {
+        transform: scale(1.08);
+        background-color: gray;
+      }
+      .box7 {
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 3/4;
+        padding: 5px;
+        transition: 0.5s;
+      }
+      .box7:hover {
+        transform: scale(1.08);
+        background-color: gray;
+      }
+      .box8 {
+        display: grid;
+        grid-column: 2/3;
+        grid-row: 3/4;
+        padding: 5px;
+        transition: 0.5s;
+      }
+      .box8:hover {
+        transform: scale(1.08);
+        background-color: gray;
+      }
+      .box9 {
+        display: grid;
+        grid-column: 3/4;
+        grid-row: 3/4;
+        padding: 5px;
+        transition: 0.5s;
+      }
+      .box9:hover {
+        transform: scale(1.08);
+        background-color: gray;
+      }
+      .hover_for_photos {
+        background-color: gray;
+        transform: scale(1.01);
+      }
+      .hover_for_photos:hover {
+        background-color: gray;
+        transform: scale(1.01);
+      }
+      .text_hover:hover {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    "
+  >
+    <div
+      class="container"
+      style="
+        width: 100%;
+        gap: 30px;
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(12, 12, 12);
+        color: white;
+        padding: 20px;
+      "
+    >
+      <div
+        class="menu"
+        style="display: flex; flex-direction: column; width: 200px"
+      >
+        <div
+          class="menu1"
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+          "
+        >
+          <img
+            class="menutog"
+            width="50px"
+            height="40px"
+            src="assetes/Screenshot 2026-02-04 at 19.24.10.png"
+            alt=""
+          />
+          <img
+            width="170px"
+            src="assetes/Screenshot 2026-02-04 at 19.25.01.png"
+            alt=""
+          />
+        </div>
+        <div
+          class="main"
+          style="
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid white;
+          "
+        >
+          <div style="display: flex; flex-direction: row; align-items: center">
+            <img
+              width="50px"
+              height="40px"
+              src="assetes/Screenshot 2026-02-04 at 19.24.34.png"
+              alt=""
+            />
+            <p>Главная</p>
+          </div>
+          <div style="display: flex; flex-direction: row; align-items: center">
+            <img
+              width="50px"
+              height="40px"
+              src="assetes/Screenshot 2026-02-04 at 19.24.42.png"
+              alt=""
+            />
+            <p>Shorts</p>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid white;
+          "
+        >
+          <p>Подписки</p>
+          <img
+            class="hover_for_photos"
+            width="200px"
+            src="icons/Screenshot 2026-02-04 at 19.31.02.png"
+            alt=""
+          />
+          <img
+            class="hover_for_photos"
+            width="200px"
+            src="icons/Screenshot 2026-02-04 at 19.31.08.png"
+            alt=""
+          />
+          <img
+            class="hover_for_photos"
+            width="200px"
+            src="icons/Screenshot 2026-02-04 at 19.31.19.png"
+            alt=""
+          />
+          <img
+            class="hover_for_photos"
+            width="200px"
+            src="icons/Screenshot 2026-02-04 at 19.31.13.png"
+            alt=""
+          />
+          <img
+            class="hover_for_photos"
+            width="200px"
+            src="icons/Screenshot 2026-02-04 at 19.31.23.png"
+            alt=""
+          />
+        </div>
+
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid white;
+          "
+        >
+          <p>Вы</p>
+          <img
+            class="hover_for_photos"
+            width="200px"
+            src="icons/Screenshot 2026-02-04 at 19.31.30.png"
+            alt=""
+          />
+          <img
+            class="hover_for_photos"
+            width="200px"
+            src="icons/Screenshot 2026-02-04 at 19.31.34.png"
+            alt=""
+          />
+          <img
+            class="hover_for_photos"
+            width="200px"
+            src="icons/Screenshot 2026-02-04 at 19.31.40.png"
+            alt=""
+          />
+          <img
+            class="hover_for_photos"
+            width="200px"
+            src="icons/Screenshot 2026-02-04 at 19.31.44.png"
+            alt=""
+          />
+          <img
+            class="hover_for_photos"
+            width="200px"
+            src="icons/Screenshot 2026-02-04 at 19.31.49.png"
+            alt=""
+          />
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid white;
+          "
+        >
+          <p>Навигатор</p>
+          <img
+            class="hover_for_photos"
+            width="180px"
+            src="neww/Screenshot 2026-02-04 at 20.45.08.png"
+            alt=""
+          />
+          <img
+            class="hover_for_photos"
+            width="180px"
+            src="neww/Screenshot 2026-02-04 at 20.45.14.png"
+            alt=""
+          />
+          <img
+            class="hover_for_photos"
+            width="180px"
+            src="neww/Screenshot 2026-02-04 at 20.45.20.png"
+            alt=""
+          />
+        </div>
+
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid white;
+          "
+        >
+          <p>Другие возможности</p>
+          <img
+            class="hover_for_photos"
+            width="180px"
+            src="neww/Screenshot 2026-02-04 at 20.45.57.png"
+            alt=""
+          />
+          <img
+            class="hover_for_photos"
+            width="180px"
+            src="neww/Screenshot 2026-02-04 at 20.45.52.png"
+            alt=""
+          />
+          <img
+            class="hover_for_photos"
+            width="180px"
+            src="neww/Screenshot 2026-02-04 at 20.45.47.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div
+        class="mob_menu"
+        style="display: none; flex-direction: column; align-items: center"
+      >
+        <img
+          class="return"
+          width="40px"
+          src="assetes/Screenshot 2026-02-04 at 19.24.10.png"
+          alt=""
+        />
+        <img
+          width="70px"
+          src="assetes/Screenshot 2026-02-05 at 06.29.02.png"
+          alt=""
+        />
+        <img
+          width="70px"
+          src="assetes/Screenshot 2026-02-05 at 06.29.21.png"
+          alt=""
+        />
+        <img
+          width="70px"
+          src="assetes/Screenshot 2026-02-05 at 06.29.44.png"
+          alt=""
+        />
+      </div>
+      <div class="right">
+        <header
+          style="
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 230px;
+          "
+        >
+          <img
+            width="130px"
+            height="40px"
+            src="assetes/Screenshot 2026-02-04 at 19.25.01.png"
+            alt=""
+          />
+
+          <div
+            style="display: flex; flex-direction: row; align-items: center"
+            class="input"
+          >
+            <input
+              style="
+                padding: 20px;
+                width: 300px;
+                height: 5px;
+                background-color: rgb(16, 16, 16);
+                color: white;
+                border-radius: 30px;
+                border-bottom-right-radius: 0px;
+                border-top-right-radius: 0px;
+                border: 1px solid gray;
+              "
+              type="text"
+              placeholder="Seacrh"
+            />
+            <img
+              width="80px"
+              height="48px"
+              src="assetes/Screenshot 2026-02-04 at 20.14.23.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="acconut"
+            style="display: flex; flex-direction: row; gap: -5px"
+          >
+            <div>
+              <img
+                class="add"
+                width="100px"
+                src="right/Screenshot 2026-02-05 at 07.06.38.png"
+                alt=""
+              />
+              <div
+                class="add_open"
+                style="
+                  display: none;
+                  flex-direction: column;
+                  gap: 0;
+                  position: absolute;
+                  background-color: rgb(38, 38, 38);
+                  width: 152px;
+                "
+              >
+                <img
+                  width="150px"
+                  src="add_open/Screenshot 2026-02-05 at 07.10.57.png"
+                  alt=""
+                />
+                <img
+                  width="150px"
+                  src="add_open/Screenshot 2026-02-05 at 07.11.03.png"
+                  alt=""
+                />
+                <img
+                  width="150px"
+                  src="add_open/Screenshot 2026-02-05 at 07.11.08.png"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <img
+              width="50px"
+              src="right/Screenshot 2026-02-05 at 07.06.28.png"
+              alt=""
+            />
+            <div class="privacy">
+              <img
+                class="point"
+                width="55px"
+                src="right/Screenshot 2026-02-05 at 07.06.20.png"
+                alt=""
+              />
+              <img
+                width="200px"
+                class="acc"
+                style="position: absolute; display: none; left: 1250px"
+                src="add_open/Screenshot 2026-02-05 at 08.15.46.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </header>
+        <div
+          style="
+            gap: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <p
+            class="text_hover"
+            style="background-color: gray; border-radius: 10px; padding: 8px"
+          >
+            Все
+          </p>
+          <p
+            class="text_hover"
+            style="background-color: gray; border-radius: 10px; padding: 8px"
+          >
+            Музыка
+          </p>
+          <p
+            class="text_hover"
+            style="background-color: gray; border-radius: 10px; padding: 8px"
+          >
+            Джемы
+          </p>
+          <p
+            class="text_hover"
+            style="background-color: gray; border-radius: 10px; padding: 8px"
+          >
+            ВидеоИгры
+          </p>
+          <p
+            class="text_hover"
+            style="background-color: gray; border-radius: 10px; padding: 8px"
+          >
+            Сейчас в эфире
+          </p>
+          <p
+            class="text_hover"
+            style="background-color: gray; border-radius: 10px; padding: 8px"
+          >
+            Рэп
+          </p>
+          <p
+            class="text_hover"
+            style="background-color: gray; border-radius: 10px; padding: 8px"
+          >
+            Природа
+          </p>
+          <p
+            class="text_hover"
+            style="background-color: gray; border-radius: 10px; padding: 8px"
+          >
+            Недавно отпубликованные
+          </p>
+          <p
+            class="text_hover"
+            style="background-color: gray; border-radius: 10px; padding: 8px"
+          >
+            Просмотрено
+          </p>
+          <p
+            class="text_hover"
+            style="background-color: gray; border-radius: 10px; padding: 8px"
+          >
+            Новое для вас
+          </p>
+        </div>
+        <div style="width: 360px" class="grid">
+          <div class="box1">
+            <img
+              width="360px"
+              src="assetes/Screenshot 2026-02-04 at 19.28.12.png"
+              alt=""
+            />
+            <h2 style="font-size: large">Lorem ipsum dolor sit amet</h2>
+            <p style="font-size: small">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
+              impedit
+            </p>
+          </div>
+          <div style="width: 360px" class="box2">
+            <img
+              width="360px"
+              src="assetes/Screenshot 2026-02-04 at 19.28.04.png"
+              alt=""
+            />
+            <h2 style="font-size: large">Lorem ipsum dolor sit amet</h2>
+            <p style="font-size: small">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
+              impedit
+            </p>
+          </div>
+          <div style="width: 360px" class="box3">
+            <img
+              width="360px"
+              src="assetes/Screenshot 2026-02-04 at 19.27.56.png"
+              alt=""
+            />
+            <h2 style="font-size: large">Lorem ipsum dolor sit amet</h2>
+            <p style="font-size: small">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
+              impedit
+            </p>
+          </div>
+          <div style="width: 360px" class="box4">
+            <img
+              width="360px"
+              src="assetes/Screenshot 2026-02-04 at 19.27.50.png"
+              alt=""
+            />
+            <h2 style="font-size: large">Lorem ipsum dolor sit amet</h2>
+            <p style="font-size: small">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
+              impedit
+            </p>
+          </div>
+          <div style="width: 360px" class="box5">
+            <img
+              width="360px"
+              src="assetes/Screenshot 2026-02-04 at 19.27.42.png"
+              alt=""
+            />
+            <h2 style="font-size: large">Lorem ipsum dolor sit amet</h2>
+            <p style="font-size: small">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
+              impedit
+            </p>
+          </div>
+          <div style="width: 360px" class="box6">
+            <img
+              width="360px"
+              src="assetes/Screenshot 2026-02-04 at 19.27.36.png"
+              alt=""
+            />
+            <h2 style="font-size: large">Lorem ipsum dolor sit amet</h2>
+            <p style="font-size: small">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
+              impedit
+            </p>
+          </div>
+          <div style="width: 360px" class="box7">
+            <img
+              width="360px"
+              src="assetes/Screenshot 2026-02-05 at 05.35.17.png"
+              alt=""
+            />
+            <h2 style="font-size: large">Lorem ipsum dolor sit amet</h2>
+            <p style="font-size: small">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
+              impedit
+            </p>
+          </div>
+          <div style="width: 360px" class="box8">
+            <img
+              width="360px"
+              src="assetes/Screenshot 2026-02-05 at 05.34.48.png"
+              alt=""
+            />
+            <h2 style="font-size: large">Lorem ipsum dolor sit amet</h2>
+            <p style="font-size: small">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
+              impedit
+            </p>
+          </div>
+          <div style="width: 360px" class="box9">
+            <img
+              width="360px"
+              src="assetes/Screenshot 2026-02-05 at 05.34.22.png"
+              alt=""
+            />
+            <h2 style="font-size: large">Lorem ipsum dolor sit amet</h2>
+            <p style="font-size: small">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
+              impedit
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const menubtn = document.querySelector(".menutog");
+      const left = document.querySelector(".menu");
+      const mob_menu = document.querySelector(".mob_menu");
+      const returnn = document.querySelector(".return");
+      const right = document.querySelector(".right");
+      const add = document.querySelector(".add");
+      const add_open = document.querySelector(".add_open");
+      const acc = document.querySelector(".acc");
+      const point = document.querySelector(".point");
+
+      menubtn.addEventListener("click", () => {
+        if (left.style.display !== "none") {
+          left.style.display = "none";
+          mob_menu.style.display = "flex";
+          right.style.width = "100%";
+        }
+      });
+      returnn.addEventListener("click", () => {
+        if (mob_menu.style.display !== "none") {
+          mob_menu.style.display = "none";
+          left.style.display = "block";
+        }
+      });
+      add.addEventListener("click", () => {
+        if (add_open.style.display === "none") {
+          add_open.style.display = "block";
+        } else {
+          add_open.style.display = "none";
+        }
+      });
+      point.addEventListener("click", () => {
+        if (acc.style.display === "none") {
+          acc.style.display = "block";
+        } else {
+          acc.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
